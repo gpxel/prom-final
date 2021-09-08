@@ -1,0 +1,17 @@
+user@node1:~/final$ sudo docker-compose logs --tail 5 nodeexporter cadvisor my-exporter
+
+Attaching to my-exporter, cadvisor, nodeexporter
+cadvisor        | W0908 20:09:38.818439       1 manager.go:288] Could not configure a source for OOM detection, disabling OOM events: open /dev/kmsg: no such file or directory
+
+my-exporter     | level=error ts=2021-09-08T20:38:19.933Z caller=exporter.go:149 msg="Error pinging mysqld" err="Error 1045: Access denied for user ''monitor'@'172.19.0.6' (using password: YES)"
+my-exporter     | level=error ts=2021-09-08T20:38:34.932Z caller=exporter.go:149 msg="Error pinging mysqld" err="Error 1045: Access denied for user ''monitor'@'172.19.0.6' (using password: YES)"
+my-exporter     | level=error ts=2021-09-08T20:38:49.932Z caller=exporter.go:149 msg="Error pinging mysqld" err="Error 1045: Access denied for user ''monitor'@'172.19.0.6' (using password: YES)"
+my-exporter     | level=error ts=2021-09-08T20:39:04.934Z caller=exporter.go:149 msg="Error pinging mysqld" err="Error 1045: Access denied for user ''monitor'@'172.19.0.6' (using password: YES)"
+my-exporter     | level=error ts=2021-09-08T20:39:19.932Z caller=exporter.go:149 msg="Error pinging mysqld" err="Error 1045: Access denied for user ''monitor'@'172.19.0.6' (using password: YES)"
+
+nodeexporter    | level=error ts=2021-09-08T20:38:31.223Z caller=collector.go:169 msg="collector failed" name=nvme duration_seconds=1.7203e-05 err="error obtaining NVMe class info: failed to list NVMe devices at \"/host/sys/class/nvme\": open /host/sys/class/nvme: no such file or directory"
+nodeexporter    | level=error ts=2021-09-08T20:38:46.224Z caller=collector.go:169 msg="collector failed" name=nvme duration_seconds=2.3705e-05 err="error obtaining NVMe class info: failed to list NVMe devices at \"/host/sys/class/nvme\": open /host/sys/class/nvme: no such file or directory"
+nodeexporter    | level=error ts=2021-09-08T20:39:01.214Z caller=collector.go:169 msg="collector failed" name=nvme duration_seconds=3.7761e-05 err="error obtaining NVMe class info: failed to list NVMe devices at \"/host/sys/class/nvme\": open /host/sys/class/nvme: no such file or directory"
+nodeexporter    | level=error ts=2021-09-08T20:39:16.229Z caller=collector.go:169 msg="collector failed" name=nvme duration_seconds=2.9447e-05 err="error obtaining NVMe class info: failed to list NVMe devices at \"/host/sys/class/nvme\": open /host/sys/class/nvme: no such file or directory"
+nodeexporter    | level=error ts=2021-09-08T20:39:31.227Z caller=collector.go:169 msg="collector failed" name=nvme duration_seconds=3.9157e-05 err="error obtaining NVMe class info: failed to list NVMe devices at \"/host/sys/class/nvme\": open /host/sys/class/nvme: no such file or directory"
+
