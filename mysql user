@@ -1,0 +1,15 @@
+mysql> select user,host from mysql.user;
++---------------+------------------------+
+| user          | host                   |
++---------------+------------------------+
+| monitor       | %                      |
+| root          | %                      |
+| wordpress     | %                      |
+| exp           | 172.18.0.0/255.255.0.0 |
+| exporter      | localhost              |
+| mysql.session | localhost              |
+| mysql.sys     | localhost              |
+| root          | localhost              |
++---------------+------------------------+
+8 rows in set (0.00 sec)
+

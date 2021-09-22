@@ -1,0 +1,26 @@
+Attaching to mys-exp, wordpress, cadvisor, nodeexporter, mysql
+cadvisor        | W0922 07:37:58.989403       1 manager.go:288] Could not configure a source for OOM detection, disabling OOM events: open /dev/kmsg: no such file or directory
+
+mys-exp         | level=info ts=2021-09-22T08:02:21.176Z caller=mysqld_exporter.go:293 msg="Scraper enabled" scraper=info_schema.innodb_cmp
+mys-exp         | level=info ts=2021-09-22T08:02:21.176Z caller=mysqld_exporter.go:293 msg="Scraper enabled" scraper=info_schema.innodb_cmpmem
+mys-exp         | level=info ts=2021-09-22T08:02:21.176Z caller=mysqld_exporter.go:293 msg="Scraper enabled" scraper=info_schema.query_response_time
+mys-exp         | level=info ts=2021-09-22T08:02:21.176Z caller=mysqld_exporter.go:303 msg="Listening on address" address=:9104
+mys-exp         | level=info ts=2021-09-22T08:02:21.178Z caller=tls_config.go:191 msg="TLS is disabled." http2=false
+
+mysql           | 2021-09-22T07:58:25.348328Z 25 [Note] Access denied for user 'root'@'161.35.186.198' (using password: YES)
+mysql           | 2021-09-22T07:58:25.603297Z 26 [Note] Access denied for user 'root'@'161.35.186.198' (using password: YES)
+mysql           | 2021-09-22T07:58:25.859113Z 27 [Note] Access denied for user 'root'@'161.35.186.198' (using password: YES)
+mysql           | 2021-09-22T07:58:26.114358Z 28 [Note] Access denied for user 'root'@'161.35.186.198' (using password: YES)
+mysql           | 2021-09-22T07:58:26.368205Z 29 [Note] Access denied for user 'root'@'161.35.186.198' (using password: YES)
+
+nodeexporter    | level=error ts=2021-09-22T08:09:01.972Z caller=collector.go:169 msg="collector failed" name=nvme duration_seconds=3.1376e-05 err="error obtaining NVMe class info: failed to list NVMe devices at \"/host/sys/class/nvme\": open /host/sys/class/nvme: no such file or directory"
+nodeexporter    | level=error ts=2021-09-22T08:09:16.963Z caller=collector.go:169 msg="collector failed" name=nvme duration_seconds=0.000100659 err="error obtaining NVMe class info: failed to list NVMe devices at \"/host/sys/class/nvme\": open /host/sys/class/nvme: no such file or directory"
+nodeexporter    | level=error ts=2021-09-22T08:09:31.971Z caller=collector.go:169 msg="collector failed" name=nvme duration_seconds=3.801e-05 err="error obtaining NVMe class info: failed to list NVMe devices at \"/host/sys/class/nvme\": open /host/sys/class/nvme: no such file or directory"
+nodeexporter    | level=error ts=2021-09-22T08:09:46.957Z caller=collector.go:169 msg="collector failed" name=nvme duration_seconds=7.3541e-05 err="error obtaining NVMe class info: failed to list NVMe devices at \"/host/sys/class/nvme\": open /host/sys/class/nvme: no such file or directory"
+nodeexporter    | level=error ts=2021-09-22T08:10:01.952Z caller=collector.go:169 msg="collector failed" name=nvme duration_seconds=2.9002e-05 err="error obtaining NVMe class info: failed to list NVMe devices at \"/host/sys/class/nvme\": open /host/sys/class/nvme: no such file or directory"
+
+wordpress       | No 'wp-config.php' found in /var/www/html, but 'WORDPRESS_...' variables supplied; copying 'wp-config-docker.php' (WORDPRESS_DB_HOST WORDPRESS_DB_NAME WORDPRESS_DB_PASSWORD WORDPRESS_DB_USER)
+wordpress       | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+wordpress       | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+wordpress       | [Wed Sep 22 07:38:02.098305 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.48 (Debian) PHP/7.4.23 configured -- resuming normal operations
+wordpress       | [Wed Sep 22 07:38:02.107953 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
